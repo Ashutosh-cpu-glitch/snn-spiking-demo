@@ -52,5 +52,7 @@ Install the required packages using:
 
 ```bash
 pip install numpy matplotlib scikit-learn notebook
+## 💻 Run
 jupyter notebook snn_spike_demo.ipynb
-
+## License
+This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
