@@ -130,7 +130,7 @@ This project is released under the **MIT License**. See [LICENSE](./LICENSE) for
 If this project sparked your curiosity in SNNs or neuromorphic computing, feel free to:
 
 * 🌐 Explore more on my [GitHub](https://github.com/Ashutosh-cpu-glitch)
-* 💼 Connect with me on [LinkedIn](#)
+* 💼 Connect with me on [LinkedIn](www.linkedin.com/in/ashutosh-dadhich-2644a3272)
 * 🤓 Let’s talk AI, brains, and beyond!
 
 ---
