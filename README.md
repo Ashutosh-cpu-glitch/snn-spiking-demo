@@ -1,58 +1,78 @@
-# snn-spiking-demo
-# 🧠 Neuromorphic Spike-Based Simulation using Leaky Integrate-and-Fire Neuron
+Spiking Neural Network (SNN) Demo for MNIST Classification 🧠💡
+Welcome to my first-ever GitHub project—a Spiking Neural Network (SNN) implementation for classifying handwritten digits from the MNIST dataset, built using the Norse library in PyTorch! This project dives into the fascinating world of neuromorphic computing, mimicking how biological neurons communicate through spikes. As a beginner in SNNs, I created this to explore Leaky Integrate-and-Fire (LIF) neurons and spatio-temporal learning, achieving ~90%+ accuracy on MNIST. 🚀
+🌟 Project Highlights
 
-This repository presents a scientific, interpretable implementation of a **spiking neural network (SNN)** using the **Leaky Integrate-and-Fire (LIF)** neuron model. The project simulates biologically inspired neuron dynamics and spike-based decision-making using Python and Jupyter Notebook, offering an educational and research-aligned introduction to **neuromorphic computing**.
+Neuromorphic Approach: Uses spiking neurons (LIF) for energy-efficient, brain-inspired digit classification.
+Tech Stack: Built with Norse (for SNN primitives), PyTorch (for GPU acceleration), and torchvision (for MNIST).
+Beginner-Friendly: Simple codebase designed to help others learn SNN basics.
+Performance: Achieves ~90%+ test accuracy after 10 epochs on MNIST.
 
----
+🧪 What Are Spiking Neural Networks?
+Unlike traditional neural networks, SNNs process information using discrete spikes over time, similar to how neurons work in the human brain. This makes them ideal for energy-efficient computing and neuromorphic hardware like Intel's Loihi. In this project, I use LIF neurons to encode and classify MNIST digits, leveraging Norse's PyTorch-based framework for seamless integration.
+📦 Installation
+Get started in a few simple steps!
 
-## 📌 Abstract
+Clone the Repository:
+git clone https://github.com/Ashutosh-cpu-glitch/snn-spiking-demo.git
+cd snn-spiking-demo
 
-Neuromorphic computing seeks to mimic the brain's event-driven architecture using spiking neuron models that communicate via discrete action potentials (spikes). Unlike conventional neural networks, SNNs encode information temporally, enabling asynchronous and low-power computation.
 
-This project demonstrates the temporal dynamics of a single LIF neuron receiving input from synthetic stimuli. The goal is to model how such neurons integrate inputs, leak membrane potential over time, and emit spikes when a threshold is exceeded — a fundamental process in biological neural systems.
+Install Dependencies:Ensure you have Python 3.8+. Install required packages using:
+pip install -r requirements.txt
 
----
+Note: A compatible GPU is optional but recommended for faster training.
 
-## 🔬 Methodology
+Download MNIST:The dataset is automatically downloaded via torchvision when you run the script.
 
-- **Neuron Model**: Leaky Integrate-and-Fire (LIF)
-- **Simulation Framework**: Python + NumPy
-- **Input**: 2D synthetic blob data (via scikit-learn)
-- **Encoding**: Rate-based spike encoding from continuous input
-- **Processing**: Temporal membrane integration and spike generation
-- **Output Decision**: Classification via total spike count across simulation window
 
----
+🚀 Usage
+Train and evaluate the SNN with a single command:
+python src/snn_mnist.py --data-dir ./data --epochs 10 --batch-size 64
 
-## 🧠 Biological Analogy
+Expected Output
 
-| Model Component         | Biological Equivalent       |
-|-------------------------|-----------------------------|
-| Membrane potential `V`  | Post-synaptic potential     |
-| Leak constant `α`       | Passive voltage decay       |
-| Threshold `θ`           | Action potential trigger    |
-| Spike event             | Neuronal firing             |
-| Time steps              | Discrete simulation of time |
+Training logs showing loss and accuracy per epoch.
+Final test accuracy (~90%+ after 10 epochs).
+Model weights can be saved to outputs/ (optional feature).
 
----
+📂 Project Structure
+├── README.md              # Project documentation
+├── requirements.txt       # Dependencies
+├── src/
+│   ├── snn_mnist.py       # Main script for training and evaluation
+├── data/                  # MNIST dataset (auto-downloaded)
+├── outputs/               # Saved models and plots (optional)
 
-## 📊 Features
+🛠️ How It Works
 
-- Biologically plausible LIF neuron
-- Temporal simulation of spike trains
-- Synthetic input encoding and visualization
-- Classification using spike frequency
-- All logic written from scratch (no deep learning frameworks)
+Data Encoding: MNIST images are converted into spike trains using rate-based encoding.
+SNN Architecture: A feedforward network with LIF neurons processes spatio-temporal data.
+Training: Uses surrogate gradient descent (via Norse) to optimize weights.
+Evaluation: Computes accuracy on the MNIST test set.
 
----
+🔮 Future Improvements
+As my first project, this is a starting point! Potential enhancements include:
 
-## 📦 Dependencies
+Adding visualizations for spike trains and membrane potentials.
+Supporting other datasets (e.g., FashionMNIST).
+Exploring advanced SNN techniques like STDP (Spike-Timing-Dependent Plasticity).
+Adapting for neuromorphic hardware (e.g., Intel Loihi).
 
-Install the required packages using:
+🤝 Contributing
+Feedback and contributions are welcome! To contribute:
 
-```bash
-pip install numpy matplotlib scikit-learn notebook
-## 💻 Run
-jupyter notebook snn_spike_demo.ipynb
-## License
-This project is licensed under the MIT License – see the [LICENSE](LICENSE) file for details.
+Fork the repository.
+Create a feature branch (git checkout -b feature/YourFeature).
+Submit a pull request with a clear description.
+
+📜 License
+This project is licensed under the MIT License. See LICENSE for details.
+🙌 Acknowledgments
+
+Norse: For an awesome PyTorch-based SNN framework.
+PyTorch: For making deep learning accessible.
+MNIST: The classic dataset for testing ML models.
+
+
+🌍 Connect with Me!Loved this project? Check out my GitHub for more, or reach out on LinkedIn to discuss neuromorphic computing, ML, or just geek out about tech! 😄
+This project was my first step into the exciting world of SNNs—hope it inspires you to explore neuromorphic computing too!
