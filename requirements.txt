@@ -1,0 +1,4 @@
+torch>=1.9.0
+norse>=0.0.6
+torchvision>=0.10.0
+tqdm>=4.62.0
